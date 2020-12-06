@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FrequentMessages" representedClassName=".FrequentMessages" syncable="YES" codeGenerationType="category">
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="messages" inverseEntity="Location"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FrequentMessages" inverseName="location" inverseEntity="FrequentMessages"/>
+    </entity>
+    <elements>
+        <element name="FrequentMessages" positionX="-643" positionY="761" width="128" height="73"/>
+        <element name="Location" positionX="-838" positionY="779" width="128" height="73"/>
+    </elements>
+</model>
